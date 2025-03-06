@@ -2,10 +2,13 @@
 
 CC?=clang
 
-CFLAGS=-I. -I./deps/arena -I./deps/string_map
+CFLAGS  = -Wall -Werror -std=c17
+CFLAGS += -I.
+CFLAGS += $(foreach X,$(shell ls ./deps), -I./deps/$(X))
 
-SOURCES=$(wildcard *.c) $(wildcard deps/arena/*.c) $(wildcard deps/string_map/*.c)
-OBJECTS=$(SOURCES:%.c=%.o)
+SOURCES  = $(wildcard *.c)
+SOURCES += $(foreach X,$(shell ls ./deps), $(wildcard deps/$(X)/*.c))
+OBJECTS  = $(SOURCES:%.c=%.o)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $<

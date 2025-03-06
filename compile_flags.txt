@@ -1,0 +1,6 @@
+-Wall
+-Werror
+-std=c11
+-I./
+-I./deps/arena
+-I./deps/string_map

@@ -92,6 +92,6 @@ size_t http_cookie_to_string(char *buffer, size_t buffer_size, const struct http
   }
 
   *(buffer + wrote++) = 0;
-  
+
   return wrote;
 }
