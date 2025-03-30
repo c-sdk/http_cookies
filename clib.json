@@ -1,6 +1,6 @@
 {
   "name": "http_cookies",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repo": "c-sdk/http_cookies",
   "description": "Implementation of RFC 6265 \"HTTP State Management Mechanism\".",
   "license": "Unlicense",
