@@ -1,11 +1,11 @@
 #ifndef __AIL_HTTP_COOKIES_H_
 #define __AIL_HTTP_COOKIES_H_ 1
 
-#include <stdbool.h>
 #include <time.h>
 
 #include "arena.h"
 #include "string_map.h"
+#include "binary_state.h"
 
 typedef struct string_map_t http_request_cookie_t;
 
@@ -17,8 +17,8 @@ struct http_cookie_t {
   char *same_site;
   struct tm expires;
   int max_age;
-  bool secure;
-  bool http_only;
+  activatable_t secure;
+  activatable_t http_only;
 };
 
 int http_parse_request_cookies(arena_t* arena,

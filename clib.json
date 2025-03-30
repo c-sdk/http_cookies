@@ -4,9 +4,13 @@
   "repo": "c-sdk/http_cookies",
   "description": "Implementation of RFC 6265 \"HTTP State Management Mechanism\".",
   "license": "Unlicense",
-  "src": ["./http_cookies.h", "./http_cookies.c"],
+  "src": [
+    "./http_cookies.h",
+    "./http_cookies.c"
+  ],
   "dependencies": {
     "c-sdk/arena": "*",
-    "c-sdk/string_map": "*"
+    "c-sdk/string_map": "*",
+    "c-sdk/binary-state": "0.1.2"
   }
 }
